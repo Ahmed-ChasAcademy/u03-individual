@@ -1,0 +1,114 @@
+:root {
+    --clr-dark: #070a13;
+    --clr-light: #f1f5f9;
+    --clr-slate400: #94a3b8;
+    --clr-slate600: #475569;
+    --clr-slate800: #1e293b;
+    --clr-rose: #e11d48;
+    --clr-indigo:#4f46e5;
+
+    /*rose rgb 	rgb(225, 29, 72) */
+    /*indigo 	rgb(79, 70, 229) */
+
+    --size-xxs: 0.5rem ;
+    --size-xs: 0.75rem ;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem ;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+*,*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: var(--clr-dark);
+    font-family: 'General Sans', sans-serif;
+    color: aliceblue;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+    align-items: center;
+
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 30vw;
+    align-items: center;
+}
+
+.main-about{
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+    margin: 30vh auto;
+    width: 50%;
+}
+
+.main-sub {
+    text-align: left;
+    
+}
+
+p{
+    color: var(--clr-light);
+}
+
+img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+
+footer {
+    justify-content: flex-end;
+}
+
+ /* Button */
+button {
+    display: inline-block;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    color: white;
+    background-color: var(--clr-rose);
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    box-shadow: 0px 10px 20px rgba(225, 29, 72, 0.5), 0px 6px 6px rgba(225, 29, 72, 0.5), 0px 0px 100px -10px rgba(225, 29, 72, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 14px 28px rgba(225, 29, 72, 0.25), 0px 10px 10px rgba(225, 29, 72, 0.22), 0px 0px 120px -10px rgba(225, 29, 72, 0.5);
+
+}
