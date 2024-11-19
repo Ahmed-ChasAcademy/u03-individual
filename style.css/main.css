@@ -1,53 +1,6 @@
-/* Button */
-button {
-  display: inline-block;
-  border: none;
-  margin-right: 20px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  letter-spacing: -0.05em;
-  color: white;
-  background-color: var(--clr-rose);
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  box-shadow: 0px 10px 20px rgba(225, 29, 72, 0.5),
-    0px 6px 6px rgba(225, 29, 72, 0.5),
-    0px 0px 100px -10px rgba(225, 29, 72, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 14px 28px rgba(225, 29, 72, 0.25),
-    0px 10px 10px rgba(225, 29, 72, 0.22),
-    0px 0px 120px -10px rgba(225, 29, 72, 0.5);
-}
-
-.sun {
-  width: 30px;
-}
-
-.sun:hover {
-  fill: var(--clr-light);
-}
-
-img {
-  border-radius: 50%;
-  width: 20%;
-}
-
-.logo {
-  width: 40px;
-}
-
-h1 {
-  font-size: var(--size-4xl);
-}
 
 
-
-.experience-container, .education-container {
+.work, .education {
   display: grid;
   gap: 20px 20px;
   grid-template-columns: auto auto auto;
@@ -56,22 +9,89 @@ h1 {
     "company location date";
 }
 
-.company {
+#company {
   grid-area: company;
 }
 
-.status {
+#status {
   grid-area: status;
 }
 
-.location {
+#location {
   grid-area: location;
 }
 
-.position {
+#position {
   grid-area: position;
 }
 
-.date {
+#date {
   grid-area: date;
+}
+
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--clr-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project p, h2 {
+  padding: 20px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.links img {
+  width: 30px;
+}
+
+
+.preview{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.github{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.links a {
+  color: var(--clr-slate400);
+}
+
+.stack-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-bottom: 100px;
+}
+
+.stack-list li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  
+}
+
+.stack-list img {
+  width: 100px;
 }
