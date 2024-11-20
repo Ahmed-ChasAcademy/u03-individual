@@ -1,15 +1,22 @@
 
 
-.work, .education {
+.work {
   display: grid;
   gap: 20px 20px;
+  text-align: center;
   grid-template-columns: auto auto auto;
   grid-template-areas:
     "position position status"
     "company location date";
 }
 
+#position {
+  text-align: left;
+  grid-area: position;
+}
+
 #company {
+  text-align: left;
   grid-area: company;
 }
 
@@ -21,14 +28,17 @@
   grid-area: location;
 }
 
-#position {
-  grid-area: position;
-}
+
 
 #date {
   grid-area: date;
 }
 
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px dashed var(--clr-indigo);
+}
 
 .projects {
   display: grid;

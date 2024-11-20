@@ -1,7 +1,32 @@
 {
-    "position": "My Blog",
-    "status": "Full-time",
-    "company": "Chas Academy",
-    "location": "Stockholm",
-    "date": "sept 1 - Dec 26"
+    "workExperience": [
+      {
+        "position": "Fullstack Developer",
+        "status": "Full-time",
+        "company": "Chas Academy",
+        "location": "Stockholm",
+        "date": "Sept 2 - July 26"
+      },
+      {
+        "position": "Warehouse Operator",
+        "status": "Part-time",
+        "company": "ICA",
+        "location": "Stockholm",
+        "date": "Jan 1 - Dec 31"
+      },
+      {
+        "position": "Warehouse Worker",
+        "status": "Part-time",
+        "company": "Ceva Logistics",
+        "location": "Stockholm",
+        "date": "Jan 2021 - present"
+      },
+      {
+        "position": "Office Assistant",
+        "status": "ENDED",
+        "company": "Miljon Bemanning",
+        "location": "Stockholm",
+        "date": "Jan 2020 - July 2020"
+      }
+    ]
   }

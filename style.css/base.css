@@ -89,7 +89,7 @@ button:hover {
 .menu-list {
     display: flex;
     list-style: none;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 
