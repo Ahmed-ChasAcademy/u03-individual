@@ -4,6 +4,7 @@
   display: grid;
   gap: 20px 20px;
   text-align: center;
+  align-items: center;
   grid-template-columns: auto auto auto;
   grid-template-areas:
     "position position status"
@@ -21,6 +22,11 @@
 }
 
 #status {
+  
+  text-align: center;
+  border-radius: 10px;
+ 
+
   grid-area: status;
 }
 
@@ -104,4 +110,15 @@ margin-bottom: 100px;
 
 .stack-list img {
   width: 100px;
+}
+
+
+.social-links {
+  display: inline-flex;
+  list-style: none;
+  align-items: center;
+}
+
+.social-links img {
+  width: 30px;
 }

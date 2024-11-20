@@ -1,35 +1,50 @@
+/* Base styles */
+.container {
+    max-width: 100%; /* Default max-width */
+}
+
+.projects {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr; /* Default: Single column */
+}
+
+.menu-list {
+    
+}
+
+h1 {
+    font-size: var(--size-4xl); /* Default font size */
+}
+
+p {
+    font-size: var(--size-2xl); /* Default font size */
+}
+
+.hero {
+    flex-direction: column;
+    text-align: center; /* Default centered layout */
+}
+
+.work,
+.edu {
+    grid-template-areas:
+        "position status"
+        "company date"
+        "location ...";
+}
+
 /* Tablet breakpoint: 560px and above */
 @media (min-width: 560px) {
     .container {
         max-width: 560px;
     }
-
-    .projects {
-        grid-template-columns: 1fr;
-    }
-
 }
 
-@media (max-width: 768px) {
-    .menu-list {
-        display: none;
-    }
-    h1 {
-        font-size: var(--size-4xl);
-    }
-    p {
-        font-size: var(--size-2xl);
-    }
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .work,
-    .edu {
-        grid-template-areas:
-            "position status"
-            "company date"
-            "location ...";
+/* Medium screens: 561px to 768px */
+@media (min-width: 561px) and (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr; /* Two columns */
     }
 }
 
@@ -37,6 +52,10 @@
 @media (min-width: 768px) {
     .container {
         max-width: 768px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr 1fr; /* Three columns */
     }
 }
 
@@ -52,40 +71,8 @@
     .container {
         max-width: 1440px;
     }
+
     .projects {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-
-
-
-
-
-
-
-.projects {
-    display: grid;
-    gap: 10px;
-}
-
-@media (max-width: 560px) {
-    .projects {
-        grid-template-columns: 1fr;
-        /* Single column on small screens */
-    }
-}
-
-@media (min-width: 561px) and (max-width: 768px) {
-    .projects {
-        grid-template-columns: 1fr 1fr;
-        /* Two columns for medium screens */
-    }
-}
-
-@media (min-width: 769px) {
-    .projects {
-        grid-template-columns: 1fr 1fr 1fr;
-        /* Three columns for larger screens */
+        grid-template-columns: 1fr 1fr 1fr; /* Ensure three columns for large screens */
     }
 }

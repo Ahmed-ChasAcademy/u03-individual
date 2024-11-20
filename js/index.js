@@ -1,84 +1,99 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('../JSON/experience.json')
+    // Apply colors to enrollment statuses
+    const enrollmentStatus = document.querySelector("#status");
+    if (enrollmentStatus) {
+        const statusText = enrollmentStatus.textContent.trim();
+        switch (statusText) {
+            case "Full-time":
+                enrollmentStatus.style.color = "green";
+                break;
+            case "Part-time": 
+                enrollmentStatus.style.color = "orange";
+                break;
+            case "Ended":
+                ;
+                enrollmentStatus.style.color = "red";
+                break;
+        }
+    }
+
+    // Fetch and render work experience
+    fetch('../JSON/work.json')
         .then(response => {
             if (!response.ok) {
-                throw new Error("Network response was not ok " + response.statusText);
+                throw new Error(`Network error: ${response.statusText}`);
             }
             return response.json();
         })
         .then(data => {
             const experienceContainer = document.getElementById("experience");
+            if (!experienceContainer) {
+                console.error("Experience container not found.");
+                return;
+            }
 
             data.workExperience.forEach(job => {
-                // Create a container for each job
+                // Create container for each job
                 const jobDiv = document.createElement("div");
                 jobDiv.classList.add("work");
 
-                // Create and populate elements
-                const position = document.createElement("p");
-                position.id = "position";
-                position.textContent = job.position;
+                // Add job details
+                const createJobDetail = (id, text) => {
+                    const element = document.createElement("p");
+                    element.id = id;
+                    element.textContent = text;
+                    return element;
+                };
 
-                const status = document.createElement("p");
-                status.id = "status";
-                status.textContent = job.status;
+                const position = createJobDetail("position", job.position);
+                const status = createJobDetail("status", job.status);
+                const company = createJobDetail("company", job.company);
+                const location = createJobDetail("location", job.location);
+                const date = createJobDetail("date", job.date);
 
-                const company = document.createElement("p");
-                company.id = "company";
-                company.textContent = job.company;
+                // Apply color to status dynamically
+                switch (job.status.trim()) {
+                    case "Full-time":
+                        status.style.color = "green";
+                        break;
+                    case "Part-time":
+                        
+                        status.style.color = "orange";
+                        break;
+                    case "Ended":
+                        
+                        status.style.color = "red";
+                        break;
+                }
 
-                const location = document.createElement("p");
-                location.id = "location";
-                location.textContent = job.location;
+                // Append details to the job container
+                [position, status, company, location, date].forEach(detail => jobDiv.appendChild(detail));
 
-                const date = document.createElement("p");
-                date.id = "date";
-                date.textContent = job.date;
-
-                // Append elements to the job container
-                jobDiv.appendChild(position);
-                jobDiv.appendChild(status);
-                jobDiv.appendChild(company);
-                jobDiv.appendChild(location);
-                jobDiv.appendChild(date);
-
-                // Append a horizontal line
-                const hr = document.createElement("hr");
-
-                // Add the job container and HR line to the experience container
+                // Add the job to the experience container
                 experienceContainer.appendChild(jobDiv);
-                experienceContainer.appendChild(hr);
+                experienceContainer.appendChild(document.createElement("hr"));
             });
         })
-        .catch(error => console.error("Error fetching the data: ", error));
-});
+        .catch(error => console.error("Error fetching the data:", error));
 
-/* Coloring the status is screwing up needs fixing when json entries*/
-document.addEventListener("DOMContentLoaded", () => {
-    const enrollmentStatus = document.querySelector("#status");
-    if (enrollmentStatus.innerHTML.trim() === "Full-time") {
-        enrollmentStatus.style.backgroundColor = "Green";
-    } else if (enrollmentStatus.innerHTML.trim() === "Part-time") {
-        enrollmentStatus.style.backgroundColor = "yellow";
-        enrollmentStatus.style.color = "black";
-    } else if (enrollmentStatus.innerHTML.trim() === "ENDED") {
-        enrollmentStatus.style.backgroundColor = "red";
+    // Dark/Light mode toggle
+    const insta = document.getElementById("instagram");
+    const darkLightMode = document.getElementById("toggle");
+    const bodyEl = document.querySelector("body");
+
+    if (darkLightMode) {
+        darkLightMode.addEventListener("click", () => {
+            const currentBackground = window.getComputedStyle(bodyEl).backgroundColor;
+
+            if (currentBackground === "rgb(255, 255, 255)") { // Light mode
+                bodyEl.style.background = "#070a13";
+                bodyEl.style.color = "white";
+                if (insta) insta.src = "/images/icons/icons8-insta-48.png";
+            } else { // Dark mode
+                bodyEl.style.background = "white";
+                bodyEl.style.color = "black";
+                if (insta) insta.src = "/images/icons/github.svg";
+            }
+        });
     }
 });
-
-
-
-
-
-const darkLightMode = document.getElementById("toggle");
-const bodyEl = document.querySelector("body");
-
-toggle.addEventListener("click", function toggler() {
-    if (bodyEl.style.background === "white") {
-        bodyEl.style.background = "#070a13";
-        bodyEl.style.color = "white"
-    } else {
-        bodyEl.style.background = "white";
-        bodyEl.style.color ="black"
-    }
-}); 
