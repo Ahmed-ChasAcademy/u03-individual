@@ -6,42 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css/base.css">
-    <link rel="stylesheet" href="/style.css/main.css">
     <link rel="stylesheet" href="/style.css/responsive.css">
-    <script src="/js/index.js"></script>
     <title>Home</title>
 </head>
 
 <body>
+  <!--Header-->
+  <header class="head-bar">
+    <img class="logo" src="/Images/logo/logo.png" alt="a-logo" />
+    <nav class="menu-list">
+      <li><a href="/html/index.html">Home</a></li>
+      <li><a href="/html/about.html">About</a></li>
+      <li><a href="/html/projects.html">Projects</a></li>
+      <li><a href="/html/technologies.html">Technology</a></li>
+      <li><a href="/html/contact.html">Contact</a></li>
+  </header>
+  <!--Header-->
 
-    <!--Header-->
-    <header class="head-bar">
-        <img class="logo" src="/Images/logo.png" alt="a-logo">
-        <nav class="menu-list">
-            <li><a href="/html/index.html">Home</a></li>
-            <li><a href="/html/about.html">About</a></li>
-            <li><a href="/html/projects.html">Projects</a></li>
-            <li><a href="/html/technologies.html">Technologies</a></li>
-            <li><a href="/html/contact.html">Contact</a></li>
-            <li class=line></li>
-            <li><svg id="toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6" width="50px">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-                </svg>
-            </li>
-            <li><button>Resume</button></li>
-        </nav>
-
-
-    </header>
-    <!--Header-->
-
-    <main class="intro container">
-        <section class="hero container">
+    <main class="intro container">      
             <h1>Hi ,<br>I am Ahmed 👋 <br> I build things for the web</h1>
             <img class="intro-pic" src="/Images/The cutest puppy soothes our hearts - LoveIn Home.jpeg" alt="profile-picture">
-        </section>
     </main>
 
 
@@ -51,18 +35,16 @@
 
 
     <footer>
-        Built & Designed by
-        <span>AHMED</span>with coffee, snus and love
-        <div class="socials">
-            <ul class=social-links>
-                <li><img id="codepen" src="/Images/icons/codepen.svg" alt=""></li>
-                <li><img src="/Images/icons/github.svg" alt=""></li>
-                <li><img src="/Images/icons/icons8-twitter-circled (1).svg" alt=""></li>
-                <li><img src="/Images/icons/icons8-linkedin.svg" alt=""></li>
-                <li><img id="instagram" src="/Images/icons/icons8-insta-48.png" alt=""></li>
-            </ul>
-        </div>
-    </footer>
+      <p>Built and Designed by <span>Ahmed</span></p>
+      <ul class = social-links>
+          <li><a href="https://codepen.io/" target="_blank"><img src="/Images/icons/codepen.svg" alt=""></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><img src="/Images/icons/icons8-insta.svg" alt=""></a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank"><img src="/Images/icons/icons8-linkedin.svg" alt=""></a></li>
+          <li><a href="https://x.com/home" target="_blank"><img src="/Images/icons/icons8-twitter-circled.svg" alt=""></a></li>
+          <li><a href="https://github.com/" target="_blank"><img src="/Images/icons/github.svg" alt=""></a></li>
+      </ul>
+  </footer>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>

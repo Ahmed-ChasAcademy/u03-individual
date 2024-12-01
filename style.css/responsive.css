@@ -1,78 +1,74 @@
-/* Base styles */
-.container {
-    max-width: 100%; /* Default max-width */
-}
+@media (min-width: 250px) and (max-width: 700px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 
-.projects {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr; /* Default: Single column */
-}
-
-.menu-list {
-    
-}
-
-h1 {
-    font-size: var(--size-4xl); /* Default font size */
-}
-
-p {
-    font-size: var(--size-2xl); /* Default font size */
-}
-
-.hero {
+  .intro {
     flex-direction: column;
-    text-align: center; /* Default centered layout */
-}
+  }
 
-.work,
-.edu {
+  .logo {
+    width: var(--icon-large);
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .work {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: auto auto;
     grid-template-areas:
-        "position status"
-        "company date"
-        "location ...";
+      "position status"
+      "company date"
+      "location ...";
+  }
+
 }
 
-/* Tablet breakpoint: 560px and above */
-@media (min-width: 560px) {
-    .container {
-        max-width: 560px;
-    }
+@media (min-width: 700px) and (max-width: 1200px) {
+  .container {
+    max-width: 560px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .intro {
+    flex-direction: column;
+  }
+  .hamburger {
+    display: none;
+  }
 }
 
-/* Medium screens: 561px to 768px */
-@media (min-width: 561px) and (max-width: 768px) {
-    .projects {
-        grid-template-columns: 1fr; /* Two columns */
-    }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container {
+    max-width: 1024px;
+  }
+  .hamburger {
+    display: none;
+  }
 }
 
-/* Larger tablet breakpoint: 768px and above */
-@media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-
-    .projects {
-        grid-template-columns: 1fr 1fr; /* Three columns */
-    }
-}
-
-/* Desktop breakpoint: 1024px and above */
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
-    }
-}
-
-/* Large desktop breakpoint: 1440px and above */
 @media (min-width: 1440px) {
-    .container {
-        max-width: 1440px;
-    }
+  .container {
+    max-width: 1440px;
+  }
 
-    .projects {
-        grid-template-columns: 1fr 1fr 1fr; /* Ensure three columns for large screens */
-    }
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .hamburger {
+    display: none;
+  }
 }

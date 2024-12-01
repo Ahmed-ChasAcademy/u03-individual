@@ -10,7 +10,7 @@
       {
         "position": "Warehouse Operator",
         "status": "Part-time",
-        "company": "ICA",
+        "company": "ICA E-handel",
         "location": "Stockholm",
         "date": "Jan 1 - Dec 31"
       },
@@ -23,10 +23,25 @@
       },
       {
         "position": "Office Assistant",
-        "status": "ENDED",
+        "status": "Ended",
         "company": "Miljon Bemanning",
         "location": "Stockholm",
         "date": "Jan 2020 - July 2020"
+      },
+
+      {
+        "position": "Bachelor of Business Management",
+        "status": "Ended",
+        "company": "Swinburne University",
+        "location": "Melbourne",
+        "date": "Jan 2014 - July 2016"
+      },
+      {
+        "position": "Diploma Business Information system",
+        "status": "Ended",
+        "company": "Swinburne University",
+        "location": "Melbourne",
+        "date": "Jan 2012 - July 2014"
       }
     ]
   }

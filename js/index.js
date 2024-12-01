@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Fetch and render work experience
-    fetch('../JSON/work.json')
+    // For the WORK json file
+    fetch('/JSON/work.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Network error: ${response.statusText}`);
@@ -76,24 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error fetching the data:", error));
 
-    // Dark/Light mode toggle
-    const insta = document.getElementById("instagram");
-    const darkLightMode = document.getElementById("toggle");
-    const bodyEl = document.querySelector("body");
-
-    if (darkLightMode) {
-        darkLightMode.addEventListener("click", () => {
-            const currentBackground = window.getComputedStyle(bodyEl).backgroundColor;
-
-            if (currentBackground === "rgb(255, 255, 255)") { // Light mode
-                bodyEl.style.background = "#070a13";
-                bodyEl.style.color = "white";
-                if (insta) insta.src = "/images/icons/icons8-insta-48.png";
-            } else { // Dark mode
-                bodyEl.style.background = "white";
-                bodyEl.style.color = "black";
-                if (insta) insta.src = "/images/icons/github.svg";
-            }
         });
-    }
-});
+
+
+
+    // For the WORK json file
