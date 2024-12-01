@@ -2,26 +2,33 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/style.css/base.css" />
-  <link rel="stylesheet" href="/style.css/responsive.css" />
-  <title>About</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css/base.css" />
+    <link rel="stylesheet" href="/style.css/responsive.css" />
+    <title>Contact</title>
 </head>
 
 <body>
-  <!--Header-->
-  <header class="head-bar">
-    <img class="logo" src="/Images/logo/logo.png" alt="a-logo" />
-    <nav class="menu-list">
-      <li><a href="/html/index.html">Home</a></li>
-      <li><a href="/html/about.html">About</a></li>
-      <li><a href="/html/projects.html">Projects</a></li>
-      <li><a href="/html/technologies.html">Technology</a></li>
-      <li><a href="/html/contact.html">Contact</a></li>
-      <li class ="line"></li>
-  </header>
-  <!--Header-->
+    <!--Header-->
+    <header>
+        <nav class="head-bar">
+            <img class="logo" src="/Images/Logo/logo.png" alt="logo" />
+            <ul class="menu-list">
+                <li><a href="/html/index.html">Home</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/projects.html">Projects</a></li>
+                <li><a href="/html/technologies.html">Technology</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+              </div>
+    </header>
+
+    <!--Header-->
 
  
       
@@ -29,9 +36,11 @@
   <main class="container experience">
     <h1>Work Experience</h1>
     <div id="experience">
-
-        <hr>
-    </div>   
+      <hr>
+    </div> 
+    <section class="resume-link">
+      <button id ="modalOpen">Resume</button>
+    </section>  
   </main>
 
 
@@ -45,6 +54,11 @@
         <li><a href="https://github.com/" target="_blank"><img src="/Images/icons/github.svg" alt=""></a></li>
     </ul>
 </footer>
+
+<dialog id = "modal">
+  <p>this is a modal to link to a resume file PDF file</p>
+  <button id ="closeModal">Close</button>
+</dialog>
   <script src="/js/index.js"></script>
 </body>
 

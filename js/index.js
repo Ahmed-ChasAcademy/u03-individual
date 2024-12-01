@@ -1,5 +1,19 @@
+const openModal = document.getElementById("modalOpen");
+const closeModal = document.getElementById("closeModal");
+const modal = document.getElementById("modal"); 
+
+//MODAL function
+openModal.addEventListener("click", () => {
+    modal.style.display = "block"; 
+});
+
+
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none"; 
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    // Apply colors to enrollment statuses
     const enrollmentStatus = document.querySelector("#status");
     if (enrollmentStatus) {
         const statusText = enrollmentStatus.textContent.trim();
@@ -17,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // For the WORK json file
+    // For the WORK json file didnt work for the education part so i used one file for both education and work.
     fetch('/JSON/work.json')
         .then(response => {
             if (!response.ok) {
@@ -33,11 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             data.workExperience.forEach(job => {
-                // Create container for each job
+                
                 const jobDiv = document.createElement("div");
                 jobDiv.classList.add("work");
 
-                // Add job details
+                
                 const createJobDetail = (id, text) => {
                     const element = document.createElement("p");
                     element.id = id;
@@ -51,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const location = createJobDetail("location", job.location);
                 const date = createJobDetail("date", job.date);
 
-                // Apply color to status dynamically
+                
                 switch (job.status.trim()) {
                     case "Full-time":
                         status.style.color = "green";
@@ -66,10 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         break;
                 }
 
-                // Append details to the job container
+                
                 [position, status, company, location, date].forEach(detail => jobDiv.appendChild(detail));
 
-                // Add the job to the experience container
+                
                 experienceContainer.appendChild(jobDiv);
                 experienceContainer.appendChild(document.createElement("hr"));
             });
@@ -80,4 +94,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // For the WORK json file
+    
